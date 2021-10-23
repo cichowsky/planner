@@ -1,10 +1,10 @@
 // FONT
 export const fontSize = {
-  xs: '1.4rem',
-  s: '1.6rem',
-  m: '1.8rem',
-  l: '2.2rem',
-  xl: '2.6rem',
+  xs: '1.2rem',
+  s: '1.4rem',
+  m: '1.6rem',
+  l: '2.0rem',
+  xl: '2.4rem',
   xxl: '3.0rem',
 };
 

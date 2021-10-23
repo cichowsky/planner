@@ -1,4 +1,4 @@
-import MainTemplate from 'templates/MainTemplate';
+import MainTemplate from 'components/templates/MainTemplate';
 import Heading from 'components/atoms/Heading/Heading';
 
 const MainView = () => {
