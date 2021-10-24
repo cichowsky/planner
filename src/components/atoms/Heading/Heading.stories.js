@@ -5,6 +5,7 @@ export default {
   component: Heading,
   argTypes: {
     children: {
+      name: 'Content',
       defaultValue: 'Hello world',
       control: 'text',
     },

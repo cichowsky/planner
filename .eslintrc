@@ -30,7 +30,15 @@
     "react/no-unescaped-entities": 0,
     "react/jsx-props-no-spreading": 0,
     "react/prefer-stateless-function": 1,
-    "react/state-in-constructor": 0
+    "react/state-in-constructor": 0,
+    "react/require-default-props": 0,
+    "no-unused-vars": [
+      1,
+      {
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "res|next|^err"
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
