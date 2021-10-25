@@ -12,3 +12,10 @@ export const fontWeight = {
   light: 300,
   bold: 700,
 };
+
+// NAVBAR
+export const navbar = {
+  thickness: '4.8rem',
+  backgroundColor: 'hsl(203, 98%, 50%)',
+  iconColor: 'hsl(0, 0%, 100%)',
+};

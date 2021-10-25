@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import icons from 'assets/icons';
 
-const Wrapper = styled.span`
+const SWrapper = styled.span`
   height: 1em;
   min-width: 1em;
   display: inline-flex;
@@ -19,7 +19,7 @@ const Wrapper = styled.span`
 
 const Icon = ({ icon, ...props }) => {
   const SVG = icons[icon];
-  return <Wrapper {...props}>{SVG && <SVG />}</Wrapper>;
+  return <SWrapper {...props}>{SVG && <SVG />}</SWrapper>;
 };
 
 Icon.propTypes = {

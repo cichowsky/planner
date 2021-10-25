@@ -1,4 +1,5 @@
 import ThemeProvider from 'providers/ThemeProvider';
+import styled from 'styled-components';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -10,10 +11,18 @@ export const parameters = {
   },
 };
 
+const StoryWrapper = styled.div`
+  background-color: ${({ theme }) => theme.backgroundColor};
+  margin: -1rem;
+  padding: 1rem;
+`;
+
 export const decorators = [
   (Story) => (
     <ThemeProvider>
-      <Story />
+      <StoryWrapper>
+        <Story />
+      </StoryWrapper>
     </ThemeProvider>
   ),
 ];
