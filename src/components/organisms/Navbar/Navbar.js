@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <SWrapper>
       <SInnerWrapper>
-        <ButtonIcon icon="todolist" as={SNavLink} to="/" />
+        <ButtonIcon icon="todolist" as={SNavLink} to="/todo" />
         <ButtonIcon icon="calendar" as={SNavLink} to="/calendar" />
         <ButtonIcon icon="shopping" as={SNavLink} to="/shopping" />
         <ButtonIcon icon="settings" as={SNavLink} to="/settings" />
