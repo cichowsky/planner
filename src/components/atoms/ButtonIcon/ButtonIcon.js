@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import icons from 'assets/icons';
 
-const SButton = styled.button`
+export const SButton = styled.button`
   width: 4rem;
   height: 4rem;
 
@@ -17,6 +17,14 @@ const SButton = styled.button`
 
   border: none;
   cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:active,
+  &.active {
+    opacity: 1;
+  }
 
   & > svg {
     height: 60%;

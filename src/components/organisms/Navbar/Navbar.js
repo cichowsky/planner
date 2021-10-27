@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import ButtonIcon from 'components/atoms/ButtonIcon/ButtonIcon';
+import IconedNav from 'components/molecules/IconedNav/IconedNav';
+import ButtonIcon, { SButton } from 'components/atoms/ButtonIcon/ButtonIcon';
 
 const SWrapper = styled.header`
   position: fixed;
@@ -9,6 +10,10 @@ const SWrapper = styled.header`
   width: 100%;
   height: ${({ theme }) => theme.navbar.thickness};
   background-color: ${({ theme }) => theme.navbar.backgroundColor};
+
+  & ${SButton} {
+    color: ${({ theme }) => theme.navbar.iconColor};
+  }
 `;
 
 const SInnerWrapper = styled.div`
@@ -17,50 +22,24 @@ const SInnerWrapper = styled.div`
   padding: 0 1rem;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 `;
 
-const SNavLink = styled(NavLink)`
-  color: ${({ theme }) => theme.navbar.iconColor};
-  position: relative;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 0.85;
-  }
-
-  &.active {
-    opacity: 1;
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background-color: currentColor;
-    opacity: 0;
-  }
-
-  &.active::before {
-    opacity: 1;
-  }
-`;
+const navLinks = [
+  { path: '/todo', icon: 'todolist', label: 'To Do' },
+  { path: '/calendar', icon: 'calendar', label: 'Calendar' },
+  { path: '/shopping', icon: 'shopping', label: 'Shopping' },
+];
 
 const Navbar = () => {
   return (
     <SWrapper>
       <SInnerWrapper>
-        <ButtonIcon icon="todolist" as={SNavLink} to="/todo" />
-        <ButtonIcon icon="calendar" as={SNavLink} to="/calendar" />
-        <ButtonIcon icon="shopping" as={SNavLink} to="/shopping" />
-        <ButtonIcon icon="settings" as={SNavLink} to="/settings" />
+        <strong>Logo</strong>
+        <IconedNav links={navLinks} />
+        <ButtonIcon as={NavLink} to="/settings" icon="settings" title="Settings" />
       </SInnerWrapper>
     </SWrapper>
   );
