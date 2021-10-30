@@ -17,3 +17,9 @@ export default {
 const Template = (args) => <ButtonIcon {...args} />;
 
 export const Default = Template.bind({});
+
+export const indicated = Template.bind({});
+indicated.args = {
+  indicated: true,
+  className: 'active',
+};

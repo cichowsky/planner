@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const SButton = styled.button`
   width: 4rem;
@@ -29,4 +29,28 @@ export const SButton = styled.button`
     width: auto;
     fill: currentColor;
   }
+
+  ${({ indicated }) =>
+    indicated &&
+    css`
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 0.2rem;
+        border-radius: 0.2rem;
+        background-color: currentColor;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      &.active::before {
+        opacity: 1;
+      }
+    `}
 `;

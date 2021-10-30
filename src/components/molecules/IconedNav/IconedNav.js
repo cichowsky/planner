@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import ButtonIcon from 'components/atoms/ButtonIcon/ButtonIcon';
 import icons from 'assets/icons';
-import { SList, SNavLink } from './IconedNav.styles';
+import { SList } from './IconedNav.styles';
 
 const IconedNav = ({ links }) => {
   return (
@@ -11,7 +12,7 @@ const IconedNav = ({ links }) => {
           links.map(({ path, icon, label }) => {
             return (
               <li key={label}>
-                <ButtonIcon as={SNavLink} to={path} icon={icon} title={label} />
+                <ButtonIcon indicated as={NavLink} to={path} icon={icon} title={label} />
               </li>
             );
           })}
