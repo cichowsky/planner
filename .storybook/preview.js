@@ -15,6 +15,7 @@ const StoryWrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundColor};
   margin: -1rem;
   padding: 1rem;
+  height: 100vh;
 `;
 
 export const decorators = [

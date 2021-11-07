@@ -9,6 +9,10 @@ const Button = styled.button`
   border: none;
   border-radius: 99999px;
   cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.button.backgroundColor};
+  }
 `;
 
 export default Button;

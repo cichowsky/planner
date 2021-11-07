@@ -10,12 +10,13 @@ export const fontSize = {
 
 export const fontWeight = {
   light: 300,
-  bold: 700,
+  bold: 600,
 };
 
-// NAVBAR
-export const navbar = {
-  thickness: '4.8rem',
-  backgroundColor: 'hsl(203, 98%, 50%)',
-  iconColor: 'hsl(0, 0%, 100%)',
+// COLOR VARIANTS
+export const variant = {
+  success: 'hsl(134, 61%, 41%)',
+  danger: 'hsl(354, 70%, 54%)',
+  warning: 'hsl(45, 100%, 51%)',
+  info: 'hsl(188, 78%, 41%)',
 };

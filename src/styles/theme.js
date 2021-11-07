@@ -1,7 +1,8 @@
-import { fontSize, fontWeight, navbar } from './variables';
+import { fontSize, fontWeight, variant } from './variables';
 
 const theme = {
   textColor: 'hsl(0, 0%, 7%)',
+  textMuted: 'hsl(208, 7%, 46%)',
   backgroundColor: 'hsl(0, 0%, 99%)',
 
   button: {
@@ -14,12 +15,15 @@ const theme = {
     backgroundColor: 'transparent',
   },
 
-  primary: 'hsl(0, 0%, 100%)',
-  secondary: 'hsl(0, 0%, 100%)',
-  accent: 'hsl(203, 98%, 50%)',
+  navbar: {
+    thickness: '4.8rem',
+    backgroundColor: 'hsl(203, 98%, 50%)',
+    iconColor: 'hsl(0, 0%, 100%)',
+  },
+
   fontSize,
   fontWeight,
-  navbar,
+  variant,
 };
 
 export default theme;
