@@ -4,7 +4,7 @@ import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 export const SWrapper = styled.div`
   position: relative;
-  max-width: 300px;
+  min-width: 250px;
   padding: 1.6rem 1.6rem 1.6rem 2.1rem;
   background-color: white;
   border-radius: 1rem;
@@ -35,7 +35,6 @@ export const SWrapper = styled.div`
 
 export const SHeading = styled(Heading)`
   margin-bottom: 0.25em;
-  margin-right: 120px;
 `;
 
 export const SActions = styled.div`

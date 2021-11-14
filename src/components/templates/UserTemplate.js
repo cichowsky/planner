@@ -12,6 +12,7 @@ const SWrapper = styled.div`
 const SContent = styled.main`
   flex-grow: 1;
   background-color: ${({ theme }) => theme.backgroundColor};
+  padding: 1.6rem;
 `;
 
 const MainTemplate = ({ children }) => {

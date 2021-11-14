@@ -22,7 +22,7 @@ const Task = ({ title, description, deadline, priority = 1 }) => {
 
 Task.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   deadline: PropTypes.string.isRequired,
   priority: PropTypes.number.isRequired,
 };
