@@ -16,6 +16,7 @@ const theme = {
   },
 
   input: {
+    backgroundColor: 'hsl(0, 0%, 96%)',
     borderColor: 'hsl(0, 0%, 70%)',
     checkedColor: variant.success,
   },
