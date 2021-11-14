@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Icon from 'components/atoms/Icon/Icon';
+import Checkbox from 'components/atoms/Input/Checkbox/Checkbox';
 import { SWrapper, SHeading, SDeadlineWrapper, SDeadline, SActions } from './Task.styles';
 
-const Task = ({ title, description, deadline, priority = 1 }) => {
+const Task = ({ title, description, deadline, priority = 1, done = false }) => {
+  const [isDone, setIsDone] = useState(done);
   return (
     <SWrapper priority={priority}>
       <SHeading as="h4">{title}</SHeading>
@@ -14,7 +17,7 @@ const Task = ({ title, description, deadline, priority = 1 }) => {
       <Paragraph mb0>{description}</Paragraph>
 
       <SActions>
-        <input type="checkbox" /> {/* todo */}
+        <Checkbox checked={isDone} onChange={() => setIsDone(!isDone)} />
       </SActions>
     </SWrapper>
   );
@@ -25,6 +28,7 @@ Task.propTypes = {
   description: PropTypes.string,
   deadline: PropTypes.string.isRequired,
   priority: PropTypes.number.isRequired,
+  done: PropTypes.bool,
 };
 
 export default Task;

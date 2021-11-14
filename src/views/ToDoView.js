@@ -1,6 +1,7 @@
 import UserTemplate from 'components/templates/UserTemplate';
 import Heading from 'components/atoms/Heading/Heading';
 import Task from 'components/organisms/Task/Task';
+import GridTemplate from 'components/templates/GridTemplate';
 
 const mockTasks = [
   {
@@ -30,9 +31,11 @@ const ToDoView = () => {
   return (
     <UserTemplate>
       <Heading>To Do View</Heading>
-      {mockTasks.map((task) => (
-        <Task {...task} key={task.id} />
-      ))}
+      <GridTemplate>
+        {mockTasks.map((task) => (
+          <Task {...task} key={task.id} />
+        ))}
+      </GridTemplate>
     </UserTemplate>
   );
 };

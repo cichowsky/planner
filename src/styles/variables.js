@@ -13,7 +13,11 @@ export const fontWeight = {
   bold: 600,
 };
 
-// COLOR VARIANTS
+// COLORS
+export const color = {
+  white: 'hsl(0, 0%, 100%)',
+};
+
 export const variant = {
   success: 'hsl(134, 61%, 41%)',
   danger: 'hsl(354, 70%, 54%)',

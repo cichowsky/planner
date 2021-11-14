@@ -1,4 +1,4 @@
-import { fontSize, fontWeight, variant } from './variables';
+import { fontSize, fontWeight, color, variant } from './variables';
 
 const theme = {
   textColor: 'hsl(0, 0%, 7%)',
@@ -15,12 +15,18 @@ const theme = {
     backgroundColor: 'transparent',
   },
 
+  input: {
+    borderColor: 'hsl(0, 0%, 70%)',
+    checkedColor: variant.success,
+  },
+
   navbar: {
     thickness: '4.8rem',
     backgroundColor: 'hsl(203, 98%, 50%)',
     iconColor: 'hsl(0, 0%, 100%)',
   },
 
+  color,
   fontSize,
   fontWeight,
   variant,
