@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const SButton = styled.button`
   width: 4rem;
@@ -14,43 +14,19 @@ export const SButton = styled.button`
   background-color: ${({ theme }) => theme.buttonIcon.backgroundColor};
 
   border: none;
+  border-radius: 0.8rem;
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 
   &:hover,
   &:active,
   &.active {
-    opacity: 1;
+    color: ${({ theme }) => theme.buttonIcon.hoverColor};
   }
 
   & > svg {
-    height: 60%;
+    height: 2.4rem;
     width: auto;
     fill: currentColor;
   }
-
-  ${({ indicated }) =>
-    indicated &&
-    css`
-      position: relative;
-
-      &::before {
-        position: absolute;
-        content: '';
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 0.2rem;
-        border-radius: 0.2rem;
-        background-color: currentColor;
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-
-      &.active::before {
-        opacity: 1;
-      }
-    `}
 `;

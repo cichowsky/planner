@@ -4,6 +4,7 @@ const theme = {
   textColor: 'hsl(0, 0%, 7%)',
   textMuted: 'hsl(208, 7%, 46%)',
   backgroundColor: 'hsl(0, 0%, 99%)',
+  accentColor: 'hsl(183, 100%, 35%)',
 
   button: {
     color: 'hsl(0, 0%, 7%)',
@@ -11,8 +12,9 @@ const theme = {
   },
 
   buttonIcon: {
-    color: 'hsl(0, 0%, 40%)',
+    color: 'hsl(0, 0%, 60%)',
     backgroundColor: 'transparent',
+    hoverColor: 'hsl(0, 0%, 40%)',
   },
 
   input: {
@@ -22,10 +24,12 @@ const theme = {
   },
 
   navbar: {
-    thickness: '4.8rem',
-    backgroundColor: 'hsl(203, 98%, 50%)',
-    iconColor: 'hsl(0, 0%, 100%)',
+    thickness: '5.2rem',
+    backgroundColor: 'hsl(0, 0%, 92%)',
+    linkColor: 'hsl(0, 0%, 25%)',
   },
+
+  shadow: '0 0.5em 1em -0.125em rgb(10 10 10 / 4%)',
 
   color,
   fontSize,

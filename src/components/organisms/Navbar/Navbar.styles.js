@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { SButton } from 'components/atoms/ButtonIcon/ButtonIcon.styles';
+import { SIcon } from 'components/atoms/Icon/Icon';
 
 export const SWrapper = styled.header`
   position: fixed;
@@ -9,8 +10,13 @@ export const SWrapper = styled.header`
   height: ${({ theme }) => theme.navbar.thickness};
   background-color: ${({ theme }) => theme.navbar.backgroundColor};
 
-  & ${SButton} {
-    color: ${({ theme }) => theme.navbar.iconColor};
+  & ${SButton}, ${SIcon} {
+    color: ${({ theme }) => theme.navbar.linkColor};
+
+    &.active {
+      color: ${({ theme }) => theme.navbar.backgroundColor};
+      background-color: ${({ theme }) => theme.navbar.linkColor};
+    }
   }
 `;
 

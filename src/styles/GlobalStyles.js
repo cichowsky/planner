@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.textColor};
   }
 
-  body, a, button {
+  body, a, button, input {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',

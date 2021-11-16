@@ -7,6 +7,7 @@ import { ReactComponent as CheckIcon } from './check.svg';
 import { ReactComponent as DeleteIcon } from './delete.svg';
 import { ReactComponent as EditIcon } from './edit.svg';
 import { ReactComponent as ClockIcon } from './clock.svg';
+import { ReactComponent as LogoIcon } from './logo.svg';
 
 const icons = {
   calendar: CalendarIcon,
@@ -18,6 +19,7 @@ const icons = {
   delete: DeleteIcon,
   edit: EditIcon,
   clock: ClockIcon,
+  logo: LogoIcon,
 };
 
 export default icons;

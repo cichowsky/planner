@@ -12,7 +12,7 @@ const IconedNav = ({ links }) => {
           links.map(({ path, icon, label }) => {
             return (
               <li key={label}>
-                <ButtonIcon indicated as={NavLink} to={path} icon={icon} title={label} />
+                <ButtonIcon as={NavLink} to={path} icon={icon} title={label} />
               </li>
             );
           })}

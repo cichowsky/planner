@@ -2,13 +2,14 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import icons from 'assets/icons';
 
-const SWrapper = styled.span`
-  height: 1em;
+export const SIcon = styled.span`
+  height: ${({ height }) => height || '1em'};
   min-width: 1em;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  flex-shrink: 0;
 
   & > svg {
     height: 100%;
@@ -19,7 +20,7 @@ const SWrapper = styled.span`
 
 const Icon = ({ icon, ...props }) => {
   const SVG = icons[icon];
-  return <SWrapper {...props}>{SVG && <SVG />}</SWrapper>;
+  return <SIcon {...props}>{SVG && <SVG />}</SIcon>;
 };
 
 Icon.propTypes = {

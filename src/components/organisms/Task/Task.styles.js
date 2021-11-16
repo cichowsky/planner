@@ -7,7 +7,7 @@ export const SWrapper = styled.div`
   padding: 1.6rem 1.6rem 1.6rem 2.1rem;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%);
+  box-shadow: ${({ theme }) => theme.shadow};
   overflow: hidden;
 
   &::before {
